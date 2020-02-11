@@ -1,8 +1,6 @@
 const core = require('@actions/core');
-const github = require('@actions/github');
 const fs = require('fs');
 const archiver = require('archiver');
-const glob = require('@actions/glob');
 
 function createZip(patterns, target, cwd) {
   return new Promise((resolve, reject) => {
