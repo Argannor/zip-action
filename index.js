@@ -4,7 +4,7 @@ const archiver = require('archiver');
 
 function createZip(patterns, target, cwd) {
   return new Promise((resolve, reject) => {
-    const output = fs.createWriteStream(__dirname + target);
+    const output = fs.createWriteStream(target);
     const archive = archiver('zip', {zlib: {level: 9}});
 
     archive.on('error', (err) => reject(err));
