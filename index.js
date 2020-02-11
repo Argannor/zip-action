@@ -22,7 +22,7 @@ async function run() {
     try {
         // `who-to-greet` input defined in action metadata file
         const patterns = core.getInput('glob').split(' ');
-        const target = corge.getInput('target');
+        const target = core.getInput('target');
         const cwd = core.getInput('cwd');
 
         await createZip(patterns, target, cwd);
