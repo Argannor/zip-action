@@ -11,7 +11,6 @@ function createZip(patterns, target, cwd) {
     output.on('close', () => resolve());
     archive.pipe(output);
 
-    console.log(patterns);
     for (let pattern of patterns) {
       archive.glob(pattern, {cwd: cwd});
     }
